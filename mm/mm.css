@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.top-decoration {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e11d48, #f43f5e, #fb7185);
+    border-radius: 3px;
+    margin: 0 auto 24px;
+}
+
+.main-card {
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 36px;
+    padding: 36px 28px;
+    border: 1px solid rgba(244, 63, 94, 0.15);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+}
+
+.logo-wrapper {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.logo-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(244,63,94,0.15), rgba(244,63,94,0.05));
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border: 1px solid rgba(244,63,94,0.25);
+}
+
+.logo-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+.brand-name {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+.brand-name span {
+    color: #f43f5e;
+    background: linear-gradient(135deg, #f43f5e, #fb7185);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.brand-tag {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.tab-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 60px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-radius: 40px;
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+}
+
+.tab-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #e11d48, #f43f5e);
+    color: white;
+    box-shadow: 0 6px 14px rgba(244, 63, 94, 0.3);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    padding: 0 18px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+}
+
+.input-field:focus-within {
+    border-color: rgba(244, 63, 94, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.input-field svg {
+    width: 20px;
+    height: 20px;
+    stroke: #f43f5e;
+    stroke-width: 1.6;
+    fill: none;
+}
+
+.input-field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 16px 0;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.input-field input:-webkit-autofill,
+.input-field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,0.4) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #e11d48, #f43f5e);
+    border: none;
+    border-radius: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+    margin-top: 14px;
+}
+
+.action-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: white;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+.action-btn:active {
+    transform: scale(0.97);
+}
+
+.message-box {
+    margin-top: 24px;
+    padding: 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    text-align: center;
+    display: none;
+    font-weight: 500;
+}
+
+.message-box.success {
+    display: block;
+    background: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.message-box.error {
+    display: block;
+    background: rgba(244, 63, 94, 0.12);
+    color: #fb7185;
+    border: 1px solid rgba(244, 63, 94, 0.25);
+}
+
+.loading-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.footer-note {
+    text-align: center;
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.footer-note svg {
+    width: 14px;
+    height: 14px;
+    stroke: #34d399;
+    stroke-width: 1.8;
+    fill: none;
+}
+
+
+
+/* Tambahkan ini di mm.css bagian .logo-icon */
+
+.logo-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(244,63,94,0.15), rgba(244,63,94,0.05));
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border: 1px solid rgba(244,63,94,0.25);
+    overflow: hidden;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
